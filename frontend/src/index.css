@@ -87,7 +87,7 @@ footer {
   color: white;
   text-align: center;
   padding: 10px 0;
-  position: relative;
+  position: fixed;
   bottom: 0;
   display: flex;
   flex-direction: column;
@@ -392,36 +392,35 @@ footer div a:hover {
 }
 
 .profile {
-  background-color: yellow;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  border-radius: 10px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
-  padding: 0.5rem;
-  font-size: 0.7rem;
+  padding: 2rem;
+  text-transform: capitalize;
 }
 .profile h2 {
   white-space: nowrap;
 }
 .notification-bar {
-  background-color: #212121;
-  color: whitesmoke;
-  max-width: 300px;
-  padding: 1rem;
-  position: fixed;
-  right: 0;
-  top: 20%;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
   justify-content: center;
   align-items: center;
-  border-radius: 10px;
-  font-size: 0.8rem;
-  border: 1px solid peachpuff;
+  gap: 1rem;
+  padding: 1rem;
+}
+.notification-bar h1,
+h2 {
+  color: whitesmoke;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.notification-bar ul li {
+  color: peachpuff;
+  font-size: 1.2rem;
 }
 .back-btn {
   max-width: max-content;

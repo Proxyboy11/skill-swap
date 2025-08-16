@@ -116,7 +116,7 @@ const SkillUser = () => {
     <>
       <div className="all-skill">
         <div className="create-skill-box" onClick={createSkill}>
-          create new skill +{" "}
+          Create new skill +{" "}
         </div>
         {newSkill.length == 0 ? (
           <h3

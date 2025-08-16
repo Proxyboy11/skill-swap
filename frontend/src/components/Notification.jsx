@@ -51,9 +51,7 @@ const NotificationBar = () => {
 
   return (
     <div className="notification-bar">
-      <h1 style={{ color: "whitesmoke", textTransform: "uppercase" }}>
-        {username}
-      </h1>
+      <h1 style={{ textTransform: "uppercase" }}>{username}</h1>
       <h2 style={{ writingMode: "horizontal-tb", textOrientation: "mixed" }}>
         Swapped By:
       </h2>

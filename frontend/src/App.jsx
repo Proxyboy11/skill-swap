@@ -19,6 +19,8 @@ import SearchBar from "./pages/SearchBar";
 import CustomUser from "./pages/CustomUser";
 import NotFound from "./pages/NotFound";
 import Unauthorized from "./pages/Unauthorized";
+import NotificationBar from "./components/Notification";
+import Profile from "./components/Profile";
 
 const App = () => {
   return (
@@ -36,6 +38,8 @@ const App = () => {
             <Route path="/skills/user/delete/:id" element={<DeleteSkill />} />
             <Route path="/skills/user/search" element={<SearchBar />} />
             <Route path="/skills/user/:email" element={<CustomUser />} />
+            <Route path="/skills/notifications" element={<NotificationBar />} />
+            <Route path="/skills/user/profile" element={<Profile />} />
           </Route>
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
