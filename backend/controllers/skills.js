@@ -4,7 +4,7 @@ const user = require("../models/user");
 
 const getAllSkills = async (req, res) => {
   try {
-    const obj = await Skills.find({}).sort("-swap");
+    const obj = await Skills.find({});
     if (obj.length === 0) {
       return res.status(200).json({ message: "No skills found" });
     }
