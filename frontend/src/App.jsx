@@ -27,19 +27,40 @@ const App = () => {
     <>
       <Routes>
         <Route element={<Layout />}>
-          <Route path="/" element={<Dashboard />} />
+          <Route path="/skill-swap/" element={<Dashboard />} />
           <Route path="/auth" element={<Register />} />
           <Route element={<UserNav />}>
-            <Route path="/skills" element={<SkillHome />} />
-            <Route path="/skills/:id" element={<Skill />} />
-            <Route path="/skills/user" element={<SkillUser />} />
-            <Route path="/skills/user/create" element={<CreateSkill />} />
-            <Route path="/skills/user/edit/:id" element={<EditSkill />} />
-            <Route path="/skills/user/delete/:id" element={<DeleteSkill />} />
-            <Route path="/skills/user/search" element={<SearchBar />} />
-            <Route path="/skills/user/:email" element={<CustomUser />} />
-            <Route path="/skills/notifications" element={<NotificationBar />} />
-            <Route path="/skills/user/profile" element={<Profile />} />
+            <Route path="/skill-swap/skills" element={<SkillHome />} />
+            <Route path="/skill-swap/skills/:id" element={<Skill />} />
+            <Route path="/skill-swap/skills/user" element={<SkillUser />} />
+            <Route
+              path="/skill-swap/skills/user/create"
+              element={<CreateSkill />}
+            />
+            <Route
+              path="/skill-swap/skills/user/edit/:id"
+              element={<EditSkill />}
+            />
+            <Route
+              path="/skill-swap/skills/user/delete/:id"
+              element={<DeleteSkill />}
+            />
+            <Route
+              path="/skill-swap/skills/user/search"
+              element={<SearchBar />}
+            />
+            <Route
+              path="/skill-swap/skills/user/:email"
+              element={<CustomUser />}
+            />
+            <Route
+              path="/skill-swap/skills/notifications"
+              element={<NotificationBar />}
+            />
+            <Route
+              path="/skill-swap/skills/user/profile"
+              element={<Profile />}
+            />
           </Route>
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />

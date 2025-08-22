@@ -24,7 +24,7 @@ const Contact = () => {
         rel="noopener noreferrer"
         style={{ textDecoration: "none", color: "#00bcd4", fontSize: "1.5rem" }}
       >
-        <MdEmail /> Email Me
+        <MdEmail /> Mail Me
       </a>
       <a
         href="https://github.com/Proxyboy11"

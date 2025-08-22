@@ -13,23 +13,23 @@ const UserNav = () => {
   return (
     <div>
       <div className="user-nav" style={{ borderBottom: "3px solid white" }}>
-        <Link to={"/skills"}>
+        <Link to={"/skill-swap/skills"}>
           <h2>Explore Skills</h2>
         </Link>
-        <Link to={"skills/user"}>
+        <Link to={"/skill-swap/skills/user"}>
           <h2>Your Skills</h2>
         </Link>
-        <Link to={"skills/user/search"}>
+        <Link to={"/skill-swap/skills/user/search"}>
           <h2>Search User</h2>
         </Link>
         <div style={{ display: "flex", flexDirection: "row", gap: "1rem" }}>
           <CgProfile
             style={{ color: "white", fontSize: "1.5rem", cursor: "pointer" }}
-            onClick={() => navigate("/skills/user/profile")}
+            onClick={() => navigate("/skill-swap/skills/user/profile")}
           />
           <IoIosNotifications
             style={{ color: "yellow", fontSize: "1.5rem", cursor: "pointer" }}
-            onClick={() => navigate("/skills/notifications")}
+            onClick={() => navigate("/skill-swap/skills/notifications")}
           />
           <h2 style={{ color: "peachpuff", textTransform: "uppercase" }}>
             {username}

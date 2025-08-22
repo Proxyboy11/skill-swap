@@ -18,7 +18,10 @@ const Header = () => {
     <header>
       <h1>Skill Swap</h1>
       <nav>
-        <Link to={isLoggedIn ? "/skills" : "/"} style={{ cursor: "pointer" }}>
+        <Link
+          to={isLoggedIn ? "/skill-swap/skills" : "/skill-swap/"}
+          style={{ cursor: "pointer" }}
+        >
           <img src={appLogo} />
         </Link>
         <div>

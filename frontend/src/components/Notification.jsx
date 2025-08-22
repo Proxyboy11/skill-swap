@@ -27,7 +27,7 @@ const NotificationBar = () => {
       .writeText(email)
       .then(() => {
         toast.info("email copied to clipboard ");
-        navigate("/skills/user/search");
+        navigate("/skill-swap/skills/user/search");
       })
       .catch((err) => {
         alert("Failed to copy ");

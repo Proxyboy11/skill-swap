@@ -31,7 +31,7 @@ const SkillUser = () => {
   const newSkill = skills.filter((skill) => skill.userEmail === email);
 
   const showSkill = async (id) => {
-    navigate(`/skills/${id}`);
+    navigate(`/skill-swap/skills/${id}`);
   };
 
   const skillDisplay = newSkill.map((skill) => {
@@ -75,11 +75,15 @@ const SkillUser = () => {
           />
           <FiEdit2
             style={{ color: "yellow", cursor: "pointer", fontSize: "1.5rem" }}
-            onClick={() => navigate(`/skills/user/edit/${skill._id}`)}
+            onClick={() =>
+              navigate(`/skill-swap/skills/user/edit/${skill._id}`)
+            }
           />
           <MdDelete
             style={{ color: "crimson", cursor: "pointer", fontSize: "1.5rem" }}
-            onClick={() => navigate(`/skills/user/delete/${skill._id}`)}
+            onClick={() =>
+              navigate(`/skill-swap/skills/user/delete/${skill._id}`)
+            }
           />
         </div>
         {skill.swappedBy.length > 0 ? (
@@ -87,7 +91,7 @@ const SkillUser = () => {
             <ul>swappers</ul>
             {skill.swappedBy.map((obj) => {
               return (
-                <Link to={`/skills/user/${obj.email}`}>
+                <Link to={`/skill-swap/skills/user/${obj.email}`}>
                   <li
                     style={{
                       textDecoration: "underline",
@@ -109,7 +113,7 @@ const SkillUser = () => {
   });
 
   const createSkill = () => {
-    navigate("/skills/user/create");
+    navigate("/skill-swap/skills/user/create");
   };
 
   return (

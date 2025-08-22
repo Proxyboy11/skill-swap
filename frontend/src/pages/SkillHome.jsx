@@ -1,6 +1,6 @@
 import { toast } from "react-toastify";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { IoIosOpen } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -11,6 +11,9 @@ const SkillHome = () => {
   const navigate = useNavigate();
   let user = JSON.parse(rawUser);
   const [skills, setSkills] = React.useState([]);
+  const [params, setParams] = useSearchParams();
+
+  const typeFilter = params.get("filterBy");
 
   const skillFetch = async () => {
     try {
@@ -41,6 +44,7 @@ const SkillHome = () => {
           },
         }
       );
+
       toast.success("Swap sent successfully!");
     } catch (error) {
       if (error.response?.status === 409) {
@@ -51,7 +55,18 @@ const SkillHome = () => {
     }
   };
 
-  const skillDisplay = skills.map((skill) => {
+  const filterSkills =
+    typeFilter === "hot"
+      ? [...skills].sort((a, b) => b.swappedBy.length - a.swappedBy.length)
+      : typeFilter === "recent"
+      ? [...skills].sort(
+          (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
+        )
+      : typeFilter === "popular"
+      ? [...skills].sort((a, b) => b.yearsOfExperience - a.yearsOfExperience)
+      : skills;
+
+  const skillDisplay = filterSkills.map((skill) => {
     return (
       <div className="skill-card" key={skill._id}>
         <div className="card-header">
@@ -90,7 +105,7 @@ const SkillHome = () => {
           style={{ color: "#3EA6FF", cursor: "pointer" }}
         />
         {user.email === skill.userEmail ? (
-          ""
+          `${skill.swap} swaps`
         ) : (
           <button className="logout-btn" onClick={() => updateSwap(skill._id)}>
             swap

@@ -6,7 +6,7 @@ const Dashboard = () => {
   const isLoggedIn = !!localStorage.getItem("token");
   const navigate = useNavigate;
 
-  const link = isLoggedIn ? "/skills" : "/auth";
+  const link = isLoggedIn ? "/skill-swap/skills" : "/auth";
 
   return (
     <div className="dashboard">

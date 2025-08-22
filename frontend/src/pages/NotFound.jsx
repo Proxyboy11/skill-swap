@@ -8,7 +8,7 @@ const NotFound = () => {
       <p style={styles.message}>
         Oops! The page you're looking for doesn't exist.
       </p>
-      <Link to="/" style={styles.homeBtn}>
+      <Link to="/skill-swap/" style={styles.homeBtn}>
         ⟵ Go Back Home
       </Link>
     </div>

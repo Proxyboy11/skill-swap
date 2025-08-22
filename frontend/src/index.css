@@ -220,6 +220,7 @@ footer div a:hover {
 }
 .user-nav a h2 {
   color: white;
+  text-transform: capitalize;
 }
 .create-skill-box {
   display: flex;
@@ -421,6 +422,36 @@ h2 {
 .notification-bar ul li {
   color: peachpuff;
   font-size: 1.2rem;
+}
+.back-btn-container {
+  margin: 0.8rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+.back-btn-container .sort-options {
+  display: flex;
+  flex-direction: row;
+  padding-inline: 2rem;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 3rem;
+}
+.sort-options button {
+  background-color: #ff6b6b;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-size: 1.1rem;
+}
+.sort-options button:hover {
+  transform: scale(1.05);
+  border: 1px solid white;
 }
 .back-btn {
   max-width: max-content;
